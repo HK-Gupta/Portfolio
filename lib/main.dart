@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/theme.dart';
-import 'package:portfolio/pages/home_page.dart';
+import 'package:portfolio/view/home_page_view.dart';
+import 'package:web_pointer/web_pointer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Portfolio',
       theme: darkTheme,
-      home: const HomePage(),
+      home: const WebPointer(
+        circleColor: Color(0xFF00DA64),
+          roundColor: Color(0xFF00DA64),
+          child: HomePageView()
+      ),
     );
   }
 }
-

@@ -33,6 +33,12 @@ var darkTheme = ThemeData(
           color: fontColor,
           fontWeight: FontWeight.w400
       ),
+      bodySmall: TextStyle(
+          fontSize: 18,
+          fontFamily: "Console",
+          color: fontColor,
+          fontWeight: FontWeight.w400
+      ),
       labelMedium: TextStyle(
           fontSize: 16,
           fontFamily: "Console",

@@ -14,14 +14,12 @@ class _HoverEffectState extends State<HoverEffect> {
   Widget build(BuildContext context) {
     return MouseRegion(
       onEnter: (value) {
-        print("Mouse Entered");
         isHover = true;
         setState(() {});
       },
       onExit: (value) {
         isHover = false;
         setState(() {});
-        print("Mouse Exited");
       },
       child: widget.builder(isHover),
     );
