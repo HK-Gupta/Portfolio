@@ -24,9 +24,7 @@ class SkillSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(child: ProgrammingSkills()),
-              SizedBox(width: 20,),
               HorizontalDivider(height: 600),
-              SizedBox(width: 100,),
               Expanded(child: SoftwareSkills()),
             ],
           ),

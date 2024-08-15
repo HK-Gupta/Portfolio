@@ -10,7 +10,7 @@ class HorizontalDivider extends StatelessWidget {
       height: height,
       width: 3.5,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer
+        color: Theme.of(context).colorScheme.onPrimary
       ),
     );
   }

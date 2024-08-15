@@ -6,7 +6,7 @@ class SoftwareSkills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Row(
@@ -14,47 +14,47 @@ class SoftwareSkills extends StatelessWidget {
           children: [
             Text(
               "Software",
-              style: TextStyle(fontSize: 22),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           ],
         ),
-        MyLinearProgressIndicator(
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"
         ),
-        SizedBox(height: 25,),
-        MyLinearProgressIndicator(
+        const SizedBox(height: 25,),
+        const MyLinearProgressIndicator(
             skill: "Java",
             percentage: 0.7,
             desc: "70"

@@ -15,7 +15,7 @@ class MyProgressIndicator extends StatelessWidget {
           radius: 60.0,
           lineWidth: 10.0,
           animation: true,
-          animationDuration: 2000,
+          animationDuration: 1500,
           percent: percentage,
           center: Text(
             "$label%",
