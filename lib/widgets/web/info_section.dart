@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/assets_path.dart';
+import 'package:portfolio/web_page_links.dart';
 import 'package:portfolio/widgets/buttons/primary_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class InfoSection extends StatelessWidget {
@@ -32,12 +34,21 @@ class InfoSection extends StatelessWidget {
                   children: [
                     PrimaryButton(
                       btnName: "Hire Me",
-                      onTap: () {},
+                      onTap: () async {
+                        final Uri emailLaunch = Uri(
+                          scheme: 'mailto',
+                          path: WebPageLinks.email1
+                        );
+                        await launchUrl(emailLaunch);
+                      },
                     ),
                     const SizedBox(width: 25),
                     PrimaryButton(
                       btnName: "Get Resume",
-                      onTap: () {},
+                      onTap: () async {
+                        final Uri resume = Uri.parse(WebPageLinks.resumeLink);
+                        await launchUrl(resume);
+                      },
                     )
                   ],
                 )

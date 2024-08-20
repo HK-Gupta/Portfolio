@@ -28,7 +28,7 @@ class ProjectSection extends StatelessWidget {
                 children: [
                   ProjectDetails(
                     icon: GifPath.hostelGif,
-                    heading: "Hostel Management App",
+                    heading: "Hostel Management",
                     subHeading: "Developed a comprehensive hostel management app with separate student/admin panels and optimized backend performance.",
                     details: "Built a robust hostel management app with distinct panels for 100+ students and admins, enabling issue creation, room availability checks, and room change requests. Utilized REST APIs to reduce data fetch time by 30% and enhanced UX with Provider and Shared Preferences, boosting app performance by 25%. Integrated secure email verification with 6-digit OTPs, and optimized backend efficiency by reducing server load by 40% with auto-shutdown after 15 minutes of inactivity.",
                   ),
@@ -48,9 +48,9 @@ class ProjectSection extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 20,),
-              HorizontalDivider(height: h*1.8),
-              const SizedBox(width: 20,),
+              const SizedBox(width: 10,),
+              HorizontalDivider(height: h*2),
+              const SizedBox(width: 10,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

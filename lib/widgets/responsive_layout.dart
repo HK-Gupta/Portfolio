@@ -12,7 +12,7 @@ class ResponsiveLayout extends StatelessWidget {
     final h = MediaQuery.of(context).size.height;
     return LayoutBuilder(
         builder: (context, constraints) {
-          if(h > w) {
+          if(h*1.1 > w) {
             return mobile;
           } else {
             return desktop;

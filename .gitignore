@@ -32,6 +32,7 @@ migrate_working_dir/
 /build/
 assets/images/
 web/favicon.png
+lib/web_page_links.dart
 
 
 # Symbolication related

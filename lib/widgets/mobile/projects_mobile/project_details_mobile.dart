@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectDetailsMobile extends StatelessWidget {
   final String icon;
   final String heading;
   final String subHeading;
   final String details;
-  const ProjectDetailsMobile({super.key, required this.icon, required this.heading, required this.subHeading, required this.details});
+  final String project;
+  const ProjectDetailsMobile({super.key, required this.icon, required this.heading, required this.subHeading, required this.details, required this.project});
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +59,16 @@ class ProjectDetailsMobile extends StatelessWidget {
           Text(
             details,
             style: Theme.of(context).textTheme.labelMedium?.copyWith(fontSize: 14),
+          ),
+          InkWell(
+            onTap: () async {
+              final Uri resume = Uri.parse(project);
+              await launchUrl(resume);
+            },
+            child: Text(
+              "Click here",
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.blue),
+            ),
           )
         ],
       ),

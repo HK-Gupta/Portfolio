@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../../web_page_links.dart';
 
 class FooterSectionMobile extends StatelessWidget {
   const FooterSectionMobile({super.key});
@@ -24,8 +27,26 @@ class FooterSectionMobile extends StatelessWidget {
               children: [
                 Text("Work with us", style: Theme.of(context).textTheme.labelMedium,),
                 const SizedBox(height: 4,),
-                Text("hkgupta1601@gmail.com", style: Theme.of(context).textTheme.bodySmall,),
-                Text("hkgupta1524@gmail.com", style: Theme.of(context).textTheme.bodySmall,),
+                InkWell(
+                    onTap: () async {
+                      final Uri emailLaunch = Uri(
+                          scheme: 'mailto',
+                          path: WebPageLinks.email1
+                      );
+                      await launchUrl(emailLaunch);
+                    },
+                    child: Text("hkgupta1601@gmail.com", style: Theme.of(context).textTheme.bodySmall,)
+                ),
+                InkWell(
+                    onTap: () async {
+                      final Uri emailLaunch = Uri(
+                          scheme: 'mailto',
+                          path: WebPageLinks.email2
+                      );
+                      await launchUrl(emailLaunch);
+                    },
+                    child: Text("hkgupta1524@gmail.com", style: Theme.of(context).textTheme.bodySmall,)
+                ),
               ],
             ),
             const SizedBox(height: 10,),
@@ -38,16 +59,36 @@ class FooterSectionMobile extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text("LinkedIn", style: Theme.of(context).textTheme.bodySmall,),
-                        Text("Github", style: Theme.of(context).textTheme.bodySmall,),
+                        InkWell(
+                            onTap: () async {
+                              final Uri url = Uri.parse(WebPageLinks.linkedIn);
+                              await launchUrl(url);
+                            },
+                            child: Text("LinkedIn", style: Theme.of(context).textTheme.bodySmall,)
+                        ),
+                        InkWell(
+                            onTap: () async {
+                              final Uri url = Uri.parse(WebPageLinks.github);
+                              await launchUrl(url);
+                            },
+                            child: Text("Github", style: Theme.of(context).textTheme.bodySmall,)
+                        ),
+                        InkWell(
+                            onTap: () async {
+                              final Uri url = Uri.parse(WebPageLinks.leetCode);
+                              await launchUrl(url);
+                            },
+                            child: Text("LeetCode", style: Theme.of(context).textTheme.bodySmall,)
+                        ),
+                        InkWell(
+                            onTap: () async {
+                              final Uri url = Uri.parse(WebPageLinks.gfg);
+                              await launchUrl(url);
+                            },
+                            child: Text("GFG", style: Theme.of(context).textTheme.bodySmall,)
+                        ),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Text("LeetCode", style: Theme.of(context).textTheme.bodySmall,),
-                        Text("GFG", style: Theme.of(context).textTheme.bodySmall,),
-                      ],
-                    )
                   ],
                 ),
               ],
