@@ -28,8 +28,8 @@ class ProjectDetails extends StatelessWidget {
             )
           ],
         ),
+        const SizedBox(height: 2,),
         Text(subHeading, style: Theme.of(context).textTheme.labelMedium,),
-        const SizedBox(height: 5,),
         Text(
           description,
           style: Theme.of(context).textTheme.labelMedium,

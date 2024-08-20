@@ -7,9 +7,10 @@ class LanguageDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     int val = level;
     return Padding(
-      padding: const EdgeInsets.only(left: 50),
+      padding: EdgeInsets.only(left: w/30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -19,11 +20,11 @@ class LanguageDetails extends StatelessWidget {
             children: List.generate(10, (index) {
                 val -= 2;
                 return Container(
-                  width: 25,
-                  height: 25,
+                  width: w/60,
+                  height: w/60,
                   margin: EdgeInsets.symmetric(horizontal: 4), // Add some spacing between the containers
                   decoration: BoxDecoration(
-                    color: val<=0?Theme.of(context).colorScheme.onPrimary: 
+                    color: val<=0?Theme.of(context).colorScheme.onPrimary:
                         val==1? Theme.of(context).colorScheme.primary.withOpacity(0.15):
                         Theme.of(context).colorScheme.primary,
                     borderRadius: BorderRadius.circular(100),

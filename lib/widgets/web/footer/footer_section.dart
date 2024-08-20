@@ -5,9 +5,10 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
+        // color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: Colors.blue,
@@ -15,7 +16,7 @@ class FooterSection extends StatelessWidget {
         )
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 50),
+        padding: EdgeInsets.symmetric(horizontal: w/9, vertical: 50),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

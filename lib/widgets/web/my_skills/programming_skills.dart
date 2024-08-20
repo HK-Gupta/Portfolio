@@ -17,8 +17,8 @@ class ProgrammingSkills extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             MyProgressIndicator(
-                percentage: 0.7,
-                label: "70",
+                percentage: 0.85,
+                label: "85",
               skill: "C/C++",
             ),
             MyProgressIndicator(
@@ -34,14 +34,14 @@ class ProgrammingSkills extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             MyProgressIndicator(
-                percentage: 0.7,
-                label: "70",
-              skill: "C/C++",
+                percentage: 0.75,
+                label: "75",
+              skill: "Java",
             ),
             MyProgressIndicator(
                 percentage: 0.8,
                 label: "80",
-              skill: "Python",
+              skill: "MySQL",
             ),
 
           ],
@@ -53,12 +53,12 @@ class ProgrammingSkills extends StatelessWidget {
             MyProgressIndicator(
                 percentage: 0.7,
                 label: "70",
-              skill: "C/C++",
+              skill: "Node.js",
             ),
             MyProgressIndicator(
-                percentage: 0.8,
-                label: "80",
-              skill: "Python",
+                percentage: 0.65,
+                label: "65",
+              skill: "REST API",
             ),
 
           ],

@@ -6,17 +6,22 @@ class KnowledgeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     return Column(
       children: [
         const SizedBox(height: 18,),
         Row(
           children: [
-            const SizedBox(width: 50,),
+            SizedBox(width: w/200,),
             Icon(Icons.done_all_rounded, color: Theme.of(context).colorScheme.primary,),
             const SizedBox(width: 20,),
-            Text(
-              knowledge,
-              style: Theme.of(context).textTheme.bodyMedium,
+            SizedBox(
+              width: w/2.7,
+              child: Text(
+                knowledge,
+                style: Theme.of(context).textTheme.bodyMedium,
+                overflow: TextOverflow.ellipsis,
+              ),
             )
           ],
         )

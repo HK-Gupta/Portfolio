@@ -10,6 +10,7 @@ var darkTheme = ThemeData(
     primary: primaryColor,
     background: bgColor,
     onPrimary: dividerColor,
+    onSecondary: borderColor,
     primaryContainer: containerColor,
     onPrimaryContainer: labelColor,
     onBackground: fontColor,

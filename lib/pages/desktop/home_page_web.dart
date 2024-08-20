@@ -5,6 +5,7 @@ import 'package:portfolio/widgets/web/footer/footer_section.dart';
 import 'package:portfolio/widgets/web/info_section.dart';
 import 'package:portfolio/widgets/web/my_service/my_service_section.dart';
 import 'package:portfolio/widgets/web/my_skills/skill_section.dart';
+import 'package:portfolio/widgets/web/projects_gif/project_section.dart';
 import '../../widgets/web/appbar/custom_appbar.dart';
 import '../../widgets/web/knowledge/knowledge_section.dart';
 
@@ -29,8 +30,11 @@ class HomePageWeb extends StatelessWidget {
               SizedBox(height: 50,),
               KnowledgeSection(),
               SizedBox(height: 50,),
+              ProjectSection(),
+              SizedBox(height: 50,),
               ExperienceSection(),
               FooterSection(),
+
             ],
           ),
         ),

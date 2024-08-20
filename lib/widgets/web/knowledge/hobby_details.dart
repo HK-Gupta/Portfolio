@@ -6,23 +6,31 @@ class HobbyDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     return Padding(
-        padding: EdgeInsets.only(left: 50),
-        child: Row(
-          children: [
-            Container(
-              width: 20,
-              height: 20,
-              margin: EdgeInsets.symmetric(horizontal: 4), // Add some spacing between the containers
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.circular(100),
-              ),
+      padding: EdgeInsets.symmetric(horizontal: w/30, vertical: 2),
+      child: Row(
+        children: [
+          Container(
+            width: w/70,
+            height: w/70,
+            margin: EdgeInsets.symmetric(horizontal: 4), // Add some spacing between the containers
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary,
+              borderRadius: BorderRadius.circular(100),
             ),
-            const SizedBox(width: 5,),
-            Text(hobby)
-          ],
-        ),
+          ),
+          const SizedBox(width: 5,),
+          SizedBox(
+            width: w/3,
+            child: Text(
+                hobby,
+                style: Theme.of(context).textTheme.bodySmall,
+              overflow: TextOverflow.ellipsis,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

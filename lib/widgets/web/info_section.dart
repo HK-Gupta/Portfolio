@@ -8,8 +8,9 @@ class InfoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 180),
+      padding: EdgeInsets.symmetric(horizontal: w/9),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -47,8 +48,8 @@ class InfoSection extends StatelessWidget {
             children: [
               Image.asset(
                   ImagePath.myPic,
-                width: 450,
-                height: 450,
+                width: w/4.5,
+                height: w/3,
               ),
               const SizedBox(height: 40,),
             ],

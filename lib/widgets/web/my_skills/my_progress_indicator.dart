@@ -9,11 +9,12 @@ class MyProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = MediaQuery.of(context).size.width;
     return Column(
       children: [
         CircularPercentIndicator(
-          radius: 60.0,
-          lineWidth: 10.0,
+          radius: w/25,
+          lineWidth: w/150,
           animation: true,
           animationDuration: 1500,
           percent: percentage,
