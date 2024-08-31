@@ -28,20 +28,21 @@ class ServiceWidgetMobile extends StatelessWidget {
             color: Theme.of(context).colorScheme.primary,
           ),
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(height: 5,),
         Text(
           title,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(height: 5,),
         Text(
           desc,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.labelMedium?.copyWith(
               fontSize: 14
           ),
-        )
+        ),
+        const SizedBox(height: 25,),
       ],
     );
   }

@@ -15,13 +15,13 @@ class InfoSectionMobile extends StatelessWidget {
         children: [
           Image.asset(
             ImagePath.myPic,
-            width: 350,
-            height: 350,
+            width: 300,
+            height: 300,
           ),
           const SizedBox(height: 20,),
           Text(
             "Hello I'm Harsh Kumar\nApp Developer & Final Year Student",
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: 5,),
           Text(
@@ -32,7 +32,7 @@ class InfoSectionMobile extends StatelessWidget {
           Row(
             children: [
               PrimaryButton(
-                btnName: "Hire Me",
+                btnName: "Contact Me",
                 onTap: () async {
                   final Uri emailLaunch = Uri(
                       scheme: 'mailto',

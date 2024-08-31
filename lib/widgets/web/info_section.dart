@@ -33,7 +33,7 @@ class InfoSection extends StatelessWidget {
                 Row(
                   children: [
                     PrimaryButton(
-                      btnName: "Hire Me",
+                      btnName: "Contact Me",
                       onTap: () async {
                         final Uri emailLaunch = Uri(
                           scheme: 'mailto',
