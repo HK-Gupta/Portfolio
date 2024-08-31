@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/buttons/primary_button_mobile.dart';
 import '../../config/assets_path.dart';
 import '../../web_page_links.dart';
 import '../buttons/primary_button.dart';
@@ -31,23 +32,27 @@ class InfoSectionMobile extends StatelessWidget {
           const SizedBox(height: 20,),
           Row(
             children: [
-              PrimaryButton(
-                btnName: "Contact Me",
-                onTap: () async {
-                  final Uri emailLaunch = Uri(
-                      scheme: 'mailto',
-                      path: WebPageLinks.email1
-                  );
-                  await launchUrl(emailLaunch);
-                },
+              Expanded(
+                child: PrimaryButtonMobile(
+                  btnName: "Contact Me",
+                  onTap: () async {
+                    final Uri emailLaunch = Uri(
+                        scheme: 'mailto',
+                        path: WebPageLinks.email1
+                    );
+                    await launchUrl(emailLaunch);
+                  },
+                ),
               ),
               const SizedBox(width: 25),
-              PrimaryButton(
-                btnName: "Get Resume",
-                onTap: () async {
-                  final Uri resume = Uri.parse(WebPageLinks.resumeLink);
-                  await launchUrl(resume);
-                },
+              Expanded(
+                child: PrimaryButtonMobile(
+                  btnName: "Get Resume",
+                  onTap: () async {
+                    final Uri resume = Uri.parse(WebPageLinks.resumeLink);
+                    await launchUrl(resume);
+                  },
+                ),
               )
             ],
           )

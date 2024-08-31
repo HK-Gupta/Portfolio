@@ -96,6 +96,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
       ),
       body: SingleChildScrollView(
         controller: _scrollController,
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
